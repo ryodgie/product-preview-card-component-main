@@ -37,8 +37,12 @@ p {
 }
 
 .hero-img {
-  /* padding: 0; */
   margin-bottom: -4px; /*removing extra space bet container div*/
+}
+
+.img-main{
+  border-radius: 0.5rem 0.5rem 0 0 ;
+
 }
 
 .subtitle {
@@ -60,6 +64,7 @@ p {
 .description {
   background-color: var(--white);
   padding: 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .leading {
@@ -85,6 +90,7 @@ p {
   border-radius: 0.5rem;
   padding: 1.1rem;
   width: 100%;
+  max-width: 295px;
 }
 
 .btn-icon-add {
@@ -105,16 +111,31 @@ p {
   justify-items: ;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media (width >= 768px ) {
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* @media (width>= 1440px) {
   .container {
     display: flex;
+
   }
-} */
+
+  .description {
+    max-width: 280px;
+    max-height: 384px;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .img-main {
+    content: url("./images/image-product-desktop.jpg");
+    max-height: 620px;
+    max-width: 256px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
